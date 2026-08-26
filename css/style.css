@@ -37,3 +37,18 @@ footer {
     color: #5f0202;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+/* 1. Controla el tamaño y encuadre de las imágenes */
+.card-img-top {
+  height: 260px;
+  object-fit: contain; /* Usa 'cover' si prefieres que la imagen llene la tarjeta sin dejar espacios */
+}
+
+/* 2. Reserva un espacio uniforme para títulos de 1 o 2 líneas */
+.card-title {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
