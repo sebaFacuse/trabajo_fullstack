@@ -4,19 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfumes Árabes - Lo quieres, te lo vendo</title>
-    <!-- Estilos locales -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Título principal solicitado por la guía -->
     <header class="container my-3 text-center">
         <h1 style="font-family: Arial; font-size: 10px;">Lo quieres, te lo vendo</h1>
     </header>
 
-    <!-- Menú con navegación (Fondo azul y texto blanco) -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
             <a class="navbar-brand fw-bold" href="index.html">Lo Quieres, Te Lo Vendo</a>
@@ -57,86 +53,143 @@
         </div>
     </nav>
 
-
     <main class="container my-5">
-        <h2 class="text-center mb-4">Catálogo de Perfumes Árabes</h2>
-        
-        <div class="row g-4">
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="card h-100 text-center shadow-sm">
-                    <img src="img/arabe/images.jpg" class="card-img-top img-fluid p-2" alt="Perfume Árabe">
-                    <div class="card-body">
-                        <h5 class="card-title">Fragancia Árabe 1</h5>
-                        <a href="contacto.html" class="btn btn-primary w-100 mt-2">Pedir por WhatsApp</a>
+        <h2 class="text-center mb-4 fw-bold">Catálogo de Perfumes Árabes</h2>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/arabe/images.jpg" class="card-img-top p-3" alt="Perfume Árabe">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="text-muted small">Árabe</span>
+                            <h5 class="card-title fw-bold mt-1">Fragancia Árabe 1</h5>
+                            <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
+                        </div>
+                        <div>
+                            <p class="fw-bold text-dark fs-5 my-2">$90.000</p>
+                            <button onclick="agregarAlCarrito('Fragancia Árabe 1', 90000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="card h-100 text-center shadow-sm">
-                    <img src="img/arabe/images (1).jpg" class="card-img-top img-fluid p-2" alt="Perfume Árabe">
-                    <div class="card-body">
-                        <h5 class="card-title">Fragancia Árabe 2</h5>
-                        <a href="contacto.html" class="btn btn-primary w-100 mt-2">Pedir por WhatsApp</a>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/arabe/images (1).jpg" class="card-img-top p-3" alt="Perfume Árabe">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="text-muted small">Árabe</span>
+                            <h5 class="card-title fw-bold mt-1">Fragancia Árabe 2</h5>
+                            <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
+                        </div>
+                        <div>
+                            <p class="fw-bold text-dark fs-5 my-2">$95.000</p>
+                            <button onclick="agregarAlCarrito('Fragancia Árabe 2', 95000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="card h-100 text-center shadow-sm">
-                    <img src="img/arabe/images (2).jpg" class="card-img-top img-fluid p-2" alt="Perfume Árabe">
-                    <div class="card-body">
-                        <h5 class="card-title">Fragancia Árabe 3</h5>
-                        <a href="contacto.html" class="btn btn-primary w-100 mt-2">Pedir por WhatsApp</a>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/arabe/images (2).jpg" class="card-img-top p-3" alt="Eclaire">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="text-muted small">Lattafa</span>
+                            <h5 class="card-title fw-bold mt-1">Eclaire</h5>
+                            <p class="card-text text-muted">Eau de Parfum - 105 ml</p>
+                        </div>
+                        <div>
+                            <p class="fw-bold text-dark fs-5 my-2">$110.000</p>
+                            <button onclick="agregarAlCarrito('Eclaire', 110000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="card h-100 text-center shadow-sm">
-                    <img src="img/arabe/images (3).jpg" class="card-img-top img-fluid p-2" alt="Perfume Árabe">
-                    <div class="card-body">
-                        <h5 class="card-title">Fragancia Árabe 4</h5>
-                        <a href="contacto.html" class="btn btn-primary w-100 mt-2">Pedir por WhatsApp</a>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/arabe/images (3).jpg" class="card-img-top p-3" alt="Perfume Árabe">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="text-muted small">Árabe</span>
+                            <h5 class="card-title fw-bold mt-1">Fragancia Árabe 4</h5>
+                            <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
+                        </div>
+                        <div>
+                            <p class="fw-bold text-dark fs-5 my-2">$92.000</p>
+                            <button onclick="agregarAlCarrito('Fragancia Árabe 4', 92000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="card h-100 text-center shadow-sm">
-                    <img src="img/arabe/images (4).jpg" class="card-img-top img-fluid p-2" alt="Perfume Árabe">
-                    <div class="card-body">
-                        <h5 class="card-title">Fragancia Árabe 5</h5>
-                        <a href="contacto.html" class="btn btn-primary w-100 mt-2">Pedir por WhatsApp</a>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/arabe/images (4).jpg" class="card-img-top p-3" alt="Perfume Árabe">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="text-muted small">Árabe</span>
+                            <h5 class="card-title fw-bold mt-1">Fragancia Árabe 5</h5>
+                            <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
+                        </div>
+                        <div>
+                            <p class="fw-bold text-dark fs-5 my-2">$98.000</p>
+                            <button onclick="agregarAlCarrito('Fragancia Árabe 5', 98000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="card h-100 text-center shadow-sm">
-                    <img src="img/arabe/images (5).jpg" class="card-img-top img-fluid p-2" alt="Perfume Árabe">
-                    <div class="card-body">
-                        <h5 class="card-title">Fragancia Árabe 6</h5>
-                        <a href="contacto.html" class="btn btn-primary w-100 mt-2">Pedir por WhatsApp</a>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/arabe/images (5).jpg" class="card-img-top p-3" alt="Perfume Árabe">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="text-muted small">Árabe</span>
+                            <h5 class="card-title fw-bold mt-1">Fragancia Árabe 6</h5>
+                            <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
+                        </div>
+                        <div>
+                            <p class="fw-bold text-dark fs-5 my-2">$100.000</p>
+                            <button onclick="agregarAlCarrito('Fragancia Árabe 6', 100000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="card h-100 text-center shadow-sm">
-                    <img src="img/arabe/images (6).jpg" class="card-img-top img-fluid p-2" alt="Perfume Árabe">
-                    <div class="card-body">
-                        <h5 class="card-title">Fragancia Árabe 7</h5>
-                        <a href="contacto.html" class="btn btn-primary w-100 mt-2">Pedir por WhatsApp</a>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/arabe/images (6).jpg" class="card-img-top p-3" alt="Perfume Árabe">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="text-muted small">Árabe</span>
+                            <h5 class="card-title fw-bold mt-1">Fragancia Árabe 7</h5>
+                            <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
+                        </div>
+                        <div>
+                            <p class="fw-bold text-dark fs-5 my-2">$93.000</p>
+                            <button onclick="agregarAlCarrito('Fragancia Árabe 7', 93000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="card h-100 text-center shadow-sm">
-                    <img src="img/arabe/images (7).jpg" class="card-img-top img-fluid p-2" alt="Perfume Árabe">
-                    <div class="card-body">
-                        <h5 class="card-title">Fragancia Árabe 8</h5>
-                        <a href="contacto.html" class="btn btn-primary w-100 mt-2">Pedir por WhatsApp</a>
+
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/arabe/images (7).jpg" class="card-img-top p-3" alt="Perfume Árabe">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="text-muted small">Árabe</span>
+                            <h5 class="card-title fw-bold mt-1">Fragancia Árabe 8</h5>
+                            <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
+                        </div>
+                        <div>
+                            <p class="fw-bold text-dark fs-5 my-2">$97.000</p>
+                            <button onclick="agregarAlCarrito('Fragancia Árabe 8', 97000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -144,12 +197,75 @@
         </div>
     </main>
 
-
     <footer>
         <p class="m-0">Desarrollado por Grupo de Trabajo | Año 2026</p>
     </footer>
 
+    <!-- Panel Deslizable del Carrito -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrito" aria-labelledby="offcanvasCarritoLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasCarritoLabel">Mi Carrito</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <ul id="lista-carrito" class="list-group list-group-flush mb-auto">
+                <li class="list-group-item text-muted text-center py-4">El carrito está vacío</li>
+            </ul>
+            <div class="border-top pt-3">
+                <div class="d-flex justify-content-between fw-bold fs-5 mb-3">
+                    <span>Total:</span>
+                    <span id="total-carrito">$0</span>
+                </div>
+                <button class="btn btn-dark w-100 rounded-0 py-2">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const carrito = [];
+
+        function agregarAlCarrito(nombre, precio) {
+            carrito.push({ nombre, precio });
+            actualizarCarritoUI();
+        }
+
+        function eliminarDelCarrito(index) {
+            carrito.splice(index, 1);
+            actualizarCarritoUI();
+        }
+
+        function actualizarCarritoUI() {
+            const contador = document.getElementById('contador-carrito');
+            const lista = document.getElementById('lista-carrito');
+            const totalElement = document.getElementById('total-carrito');
+
+            contador.textContent = carrito.length;
+
+            if (carrito.length === 0) {
+                lista.innerHTML = '<li class="list-group-item text-muted text-center py-4">El carrito está vacío</li>';
+                totalElement.textContent = '$0';
+                return;
+            }
+
+            lista.innerHTML = '';
+            let total = 0;
+
+            carrito.forEach((producto, index) => {
+                total += producto.precio;
+                lista.innerHTML += `
+                    <li class="list-group-item d-flex justify-content-between align-items-center px-0 py-3">
+                        <div>
+                            <h6 class="my-0 fw-bold">${producto.nombre}</h6>
+                            <small class="text-muted">$${producto.precio.toLocaleString('es-CL')}</small>
+                        </div>
+                        <button class="btn btn-sm btn-outline-danger border-0" onclick="eliminarDelCarrito(${index})">✕</button>
+                    </li>
+                `;
+            });
+
+            totalElement.textContent = `$${total.toLocaleString('es-CL')}`;
+        }
+    </script>
 </body>
 </html>
