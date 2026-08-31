@@ -52,3 +52,70 @@ footer {
   justify-content: center;
   margin-bottom: 0.5rem;
 }
+
+.store-card{
+    margin-bottom: 40px;
+    text-align: center;
+
+}
+
+.store-card h2 {
+    
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.store-card .adress {
+    color: #555555;
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.store-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.schedule li {
+    font-size: 15px;
+    margin-bottom: 4px;
+    color: #333333
+}
+
+.map-link {
+    display: inline-block;
+    color: #e62222;
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.store_image , .tienda_info{
+    flex: 1;
+}
+
+.tienda-contendor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.tienda_info{
+    text-align: left;
+}
+
+.store_image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+@media (max-width 768px){
