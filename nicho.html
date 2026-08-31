@@ -1,212 +1,271 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Perfumes Nicho - Lo quieres, te lo vendo</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="catalogo.html">Catalogo</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="arabes.html">Arabes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="diseñador.html">Diseñador</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="nicho.html">Nichos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="tiendas.html">Tiendas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contacto.html">Contactos</a>
-          </li>
-          <button class="btn btn-dark position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCarrito">
-           🛒 Carrito
-          <span id="contador-carrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                  0
-          </span>
-          </button>
-          </li>
+    <header class="container my-3 text-center">
+        <h1 style="font-family: Arial; font-size: 10px;">Lo quieres, te lo vendo</h1>
+    </header>
 
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-<div id="carouselInicio" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner" style="height: 800px !important;">
-    <div class="carousel-item active h-100">
-      <img src="img/assets/watermarked_img_4464425131527519554.jpg" class="d-block w-100 h-100" alt="Encuentra tu firma olfativa" style="object-fit: cover; object-position: center 20%;">
-    </div>
-    <div class="carousel-item h-100">
-      <img src="img/assets/hombre-con-blue-chanel.jpg" class="d-block w-100 h-100" alt="Perfumes para hombre" style="object-fit: cover; object-position: center 40%;">
-    </div>
-  </div>
-</div>
-
-
-
-  <section class="container my-5">
-  <h2 class="text-center mb-4 fw-bold">MÁS VENDIDOS</h2>
-
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-
-    
-    <div class="col">
-      <div class="card h-100 border-0 shadow-sm">
-        <img src="img/diseñador/descargar.webp" class="card-img-top p-3" alt="Dior Sauvage">
-        <div class="card-body text-center d-flex flex-column justify-content-between">
-          <div>
-            <span class="text-muted small">Dior</span>
-            <h5 class="card-title fw-bold mt-1">Sauvage</h5>
-            <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
-          </div>
-          <div>
-            <p class="fw-bold text-dark fs-5 my-2">$125.000</p>
-            <button onclick="agregarAlCarrito('Sauvage', 125000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
-          </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">Lo Quieres, Te Lo Vendo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="arabes.html">Árabes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="diseñador.html">Diseñador</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="nicho.html">Nichos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tiendas.html">Tiendas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+                <button class="btn btn-dark position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCarrito">
+                    🛒 Carrito
+                    <span id="contador-carrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                </button>
+            </div>
         </div>
-      </div>
-    </div>
+    </nav>
 
+    <main class="container my-5">
+        <h2 class="text-center mb-4 fw-bold">Catálogo Perfumes de Nicho</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
 
-    
-    <div class="col">
-      <div class="card h-100 border-0 shadow-sm">
-        <img src="img/diseñador/OIP (6).webp" class="card-img-top p-3" alt="Stronger with you intensely">
-        <div class="card-body text-center d-flex flex-column justify-content-between">
-          <div>
-            <span class="text-muted small">Armani</span>
-            <h5 class="card-title fw-bold mt-1">Stronger with you intensely</h5>
-            <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
-          </div>
-          <div>
-            <p class="fw-bold text-dark fs-5 my-2">$140.000</p>
-            <button onclick="agregarAlCarrito('Stronger with you intensely', 140000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/nicho/images.jpg" class="card-img-top p-3" alt="Perfume Nicho">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="text-muted small">Nicho</span>
+                            <h5 class="card-title fw-bold mt-1">erba pura</h5>
+                            <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
+                        </div>
+                        <div>
+                            <p class="fw-bold text-dark fs-5 my-2">$95.000</p>
+                            <button onclick="agregarAlCarrito('Fragancia Nicho 1', 95000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-          </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/nicho/images (1).jpg" class="card-img-top p-3" alt="Perfume Nicho">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="text-muted small">Nicho</span>
+                            <h5 class="card-title fw-bold mt-1">mirabilis</h5>
+                            <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
+                        </div>
+                        <div>
+                            <p class="fw-bold text-dark fs-5 my-2">$98.000</p>
+                            <button onclick="agregarAlCarrito('Fragancia Nicho 2', 98000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/nicho/images (2).jpg" class="card-img-top p-3" alt="Perfume Nicho">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="text-muted small">Nicho</span>
+                            <h5 class="card-title fw-bold mt-1">Parfums de Marly - Layton Decant</h5>
+                            <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
+                        </div>
+                        <div>
+                            <p class="fw-bold text-dark fs-5 my-2">$102.000</p>
+                            <button onclick="agregarAlCarrito('Fragancia Nicho 3', 102000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/nicho/images(blue).jpg" class="card-img-top p-3" alt="Perfume Nicho">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="text-muted small">Nicho</span>
+                            <h5 class="card-title fw-bold mt-1">Blue Talisman</h5>
+                            <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
+                        </div>
+                        <div>
+                            <p class="fw-bold text-dark fs-5 my-2">$280.000</p>
+                            <button onclick="agregarAlCarrito('Fragancia Nicho 4', 280000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/nicho/images (12).jpg" class="card-img-top p-3" alt="Perfume Nicho">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="text-muted small">Nicho</span>
+                            <h5 class="card-title fw-bold mt-1">Tom ford</h5>
+                            <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
+                        </div>
+                        <div>
+                            <p class="fw-bold text-dark fs-5 my-2">$110.000</p>
+                            <button onclick="agregarAlCarrito('Fragancia Nicho 5', 110000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/nicho/images (5).jpg" class="card-img-top p-3" alt="Perfume Nicho">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="text-muted small">Nicho</span>
+                            <h5 class="card-title fw-bold mt-1">Andrew's N18</h5>
+                            <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
+                        </div>
+                        <div>
+                            <p class="fw-bold text-dark fs-5 my-2">$99.000</p>
+                            <button onclick="agregarAlCarrito('Fragancia Nicho 6', 99000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/nicho/images (6).jpg" class="card-img-top p-3" alt="Perfume Nicho">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="text-muted small">Nicho</span>
+                            <h5 class="card-title fw-bold mt-1">Selene</h5>
+                            <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
+                        </div>
+                        <div>
+                            <p class="fw-bold text-dark fs-5 my-2">$115.000</p>
+                            <button onclick="agregarAlCarrito('Fragancia Nicho 7', 115000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/nicho/images (11).jpg" class="card-img-top p-3" alt="Perfume Nicho">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="text-muted small">Nicho</span>
+                            <h5 class="card-title fw-bold mt-1">Guisada</h5>
+                            <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
+                        </div>
+                        <div>
+                            <p class="fw-bold text-dark fs-5 my-2">$120.000</p>
+                            <button onclick="agregarAlCarrito('Fragancia Nicho 8', 120000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/nicho/images10.jpg" class="card-img-top p-3" alt="Perfume Nicho">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="text-muted small">Nicho</span>
+                            <h5 class="card-title fw-bold mt-1">Creed</h5>
+                            <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
+                        </div>
+                        <div>
+                            <p class="fw-bold text-dark fs-5 my-2">$125.000</p>
+                            <button onclick="agregarAlCarrito('Fragancia Nicho 9', 125000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-      </div>
-    </div>
+    </main>
 
-    
-    <div class="col">
-      <div class="card h-100 border-0 shadow-sm">
-        <img src="img/arabe/images (2).jpg" class="card-img-top p-3" alt="Eclaire">
-        <div class="card-body text-center d-flex flex-column justify-content-between">
-          <div>
-            <span class="text-muted small">Lattafa</span>
-            <h5 class="card-title fw-bold mt-1">Eclaire</h5>
-            <p class="card-text text-muted">Eau de Parfum - 105 ml</p>
-          </div>
-          <div>
-            <p class="fw-bold text-dark fs-5 my-2">$110.000</p>
-            <button onclick="agregarAlCarrito('Eclaire', 110000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
-          </div>
+    <footer>
+        <p class="m-0">Desarrollado por Grupo de Trabajo | Año 2026</p>
+    </footer>
+
+    <!-- Panel Deslizable del Carrito -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrito" aria-labelledby="offcanvasCarritoLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasCarritoLabel">Mi Carrito</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-      </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <ul id="lista-carrito" class="list-group list-group-flush mb-auto">
+                <li class="list-group-item text-muted text-center py-4">El carrito está vacío</li>
+            </ul>
+            <div class="border-top pt-3">
+                <div class="d-flex justify-content-between fw-bold fs-5 mb-3">
+                    <span>Total:</span>
+                    <span id="total-carrito">$0</span>
+                </div>
+                <button class="btn btn-dark w-100 rounded-0 py-2">Finalizar Compra</button>
+            </div>
+        </div>
     </div>
 
-  </div>
-</section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const carrito = [];
 
+        function agregarAlCarrito(nombre, precio) {
+            carrito.push({ nombre, precio });
+            actualizarCarritoUI();
+        }
 
+        function eliminarDelCarrito(index) {
+            carrito.splice(index, 1);
+            actualizarCarritoUI();
+        }
 
+        function actualizarCarritoUI() {
+            const contador = document.getElementById('contador-carrito');
+            const lista = document.getElementById('lista-carrito');
+            const totalElement = document.getElementById('total-carrito');
 
+            contador.textContent = carrito.length;
 
-<!-- Panel Deslizable del Carrito -->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrito" aria-labelledby="offcanvasCarritoLabel">
-  <div class="offcanvas-header border-bottom">
-    <h5 class="offcanvas-title fw-bold" id="offcanvasCarritoLabel">Mi Carrito</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  
-  <div class="offcanvas-body d-flex flex-column">
-    <!-- lista donde se renderizan los productos -->
-    <ul id="lista-carrito" class="list-group list-group-flush mb-auto">
-      <li class="list-group-item text-muted text-center py-4">El carrito está vacío</li>
-    </ul>
+            if (carrito.length === 0) {
+                lista.innerHTML = '<li class="list-group-item text-muted text-center py-4">El carrito está vacío</li>';
+                totalElement.textContent = '$0';
+                return;
+            }
 
-    <!-- resumen del pago --> 
-    <div class="border-top pt-3">
-      <div class="d-flex justify-content-between fw-bold fs-5 mb-3">
-        <span>Total:</span>
-        <span id="total-carrito">$0</span>
-      </div>
-      <button class="btn btn-dark w-100 rounded-0 py-2">Finalizar Compra</button>
-    </div>
-  </div>
-</div>
+            lista.innerHTML = '';
+            let total = 0;
 
+            carrito.forEach((producto, index) => {
+                total += producto.precio;
+                lista.innerHTML += `
+                    <li class="list-group-item d-flex justify-content-between align-items-center px-0 py-3">
+                        <div>
+                            <h6 class="my-0 fw-bold">${producto.nombre}</h6>
+                            <small class="text-muted">$${producto.precio.toLocaleString('es-CL')}</small>
+                        </div>
+                        <button class="btn btn-sm btn-outline-danger border-0" onclick="eliminarDelCarrito(${index})">✕</button>
+                    </li>
+                `;
+            });
+
+            totalElement.textContent = `$${total.toLocaleString('es-CL')}`;
+        }
+    </script>
 </body>
-
-
-<script>
-  const carrito = [];
-
-  function agregarAlCarrito(nombre, precio) {
-    carrito.push({ nombre, precio });
-    actualizarCarritoUI();
-  }
-
-  function eliminarDelCarrito(index) {
-    carrito.splice(index, 1);
-    actualizarCarritoUI();
-  }
-
-  function actualizarCarritoUI() {
-    const contador = document.getElementById('contador-carrito');
-    const lista = document.getElementById('lista-carrito');
-    const totalElement = document.getElementById('total-carrito');
-
-    /* aca actualiza el boton del contador */
-    contador.textContent = carrito.length;
-
-    /* si esta vacio se muestra un mensaje por defecto */
-    if (carrito.length === 0) {
-      lista.innerHTML = '<li class="list-group-item text-muted text-center py-4">El carrito está vacío</li>';
-      totalElement.textContent = '$0';
-      return;
-    }
-
-    /* aca rendeizamos items y calculamos la suma de los productos */
-    lista.innerHTML = '';
-    let total = 0;
-
-    carrito.forEach((producto, index) => {
-      total += producto.precio;
-      lista.innerHTML += `
-        <li class="list-group-item d-flex justify-content-between align-items-center px-0 py-3">
-          <div>
-            <h6 class="my-0 fw-bold">${producto.nombre}</h6>
-            <small class="text-muted">$${producto.precio.toLocaleString('es-CL')}</small>
-          </div>
-          <button class="btn btn-sm btn-outline-danger border-0" onclick="eliminarDelCarrito(${index})">✕</button>
-        </li>
-      `;
-    });
-
-    totalElement.textContent = `$${total.toLocaleString('es-CL')}`;
-  }
-</script>
-
-
 </html>

@@ -39,6 +39,12 @@
             <a class="nav-link" href="contacto.html">Contactos</a>
           </li>
         </ul>
+        <button class="btn btn-dark position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCarrito">
+           🛒 Carrito
+          <span id="contador-carrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  0
+          </span>
+          </button>
       </div>
     </div>
   </nav>
@@ -73,11 +79,12 @@
           </div>
           <div>
             <p class="fw-bold text-dark fs-5 my-2">$125.000</p>
-            <button class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+            <button onclick="agregarAlCarrito('Sauvage', 125000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
           </div>
         </div>
       </div>
     </div>
+
 
     
     <div class="col">
@@ -91,7 +98,8 @@
           </div>
           <div>
             <p class="fw-bold text-dark fs-5 my-2">$140.000</p>
-            <button class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+            <button onclick="agregarAlCarrito('Stronger with you intensely', 140000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+
           </div>
         </div>
       </div>
@@ -109,7 +117,7 @@
           </div>
           <div>
             <p class="fw-bold text-dark fs-5 my-2">$110.000</p>
-            <button class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+            <button onclick="agregarAlCarrito('Eclaire', 110000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
           </div>
         </div>
       </div>
@@ -118,5 +126,85 @@
   </div>
 </section>
 
+
+
+
+
+<!-- Panel Deslizable del Carrito -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrito" aria-labelledby="offcanvasCarritoLabel">
+  <div class="offcanvas-header border-bottom">
+    <h5 class="offcanvas-title fw-bold" id="offcanvasCarritoLabel">Mi Carrito</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  
+  <div class="offcanvas-body d-flex flex-column">
+    <!-- Lista donde se renderizan los productos -->
+    <ul id="lista-carrito" class="list-group list-group-flush mb-auto">
+      <li class="list-group-item text-muted text-center py-4">El carrito está vacío</li>
+    </ul>
+
+    <!-- Resumen de pago -->
+    <div class="border-top pt-3">
+      <div class="d-flex justify-content-between fw-bold fs-5 mb-3">
+        <span>Total:</span>
+        <span id="total-carrito">$0</span>
+      </div>
+      <button class="btn btn-dark w-100 rounded-0 py-2">Finalizar Compra</button>
+    </div>
+  </div>
+</div>
+
 </body>
+
+
+<script>
+  const carrito = [];
+
+  function agregarAlCarrito(nombre, precio) {
+    carrito.push({ nombre, precio });
+    actualizarCarritoUI();
+  }
+
+  function eliminarDelCarrito(index) {
+    carrito.splice(index, 1);
+    actualizarCarritoUI();
+  }
+
+  function actualizarCarritoUI() {
+    const contador = document.getElementById('contador-carrito');
+    const lista = document.getElementById('lista-carrito');
+    const totalElement = document.getElementById('total-carrito');
+
+    // 1. Actualizar el contador del botón
+    contador.textContent = carrito.length;
+
+    // 2. Si está vacío, mostrar mensaje por defecto
+    if (carrito.length === 0) {
+      lista.innerHTML = '<li class="list-group-item text-muted text-center py-4">El carrito está vacío</li>';
+      totalElement.textContent = '$0';
+      return;
+    }
+
+    // 3. Renderizar items y calcular suma
+    lista.innerHTML = '';
+    let total = 0;
+
+    carrito.forEach((producto, index) => {
+      total += producto.precio;
+      lista.innerHTML += `
+        <li class="list-group-item d-flex justify-content-between align-items-center px-0 py-3">
+          <div>
+            <h6 class="my-0 fw-bold">${producto.nombre}</h6>
+            <small class="text-muted">$${producto.precio.toLocaleString('es-CL')}</small>
+          </div>
+          <button class="btn btn-sm btn-outline-danger border-0" onclick="eliminarDelCarrito(${index})">✕</button>
+        </li>
+      `;
+    });
+
+    totalElement.textContent = `$${total.toLocaleString('es-CL')}`;
+  }
+</script>
+
+
 </html>
