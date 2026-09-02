@@ -118,4 +118,284 @@ footer {
     object-fit: cover;
 }
 
-@media (max-width 768px){
+/* Configuración general */
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+.tiendas-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Encabezado principal */
+.tiendas-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 40px;
+}
+
+.tiendas-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.tiendas-header p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Estructura de la tienda (Layout) */
+.tienda-card {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+/* Imagen */
+.tienda-imagen {
+  flex: 1;
+  width: 100%;
+}
+
+.tienda-imagen img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Detalles del texto */
+.tienda-detalle {
+  flex: 1;
+  width: 100%;
+}
+
+.tienda-detalle h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.direccion {
+  color: #777;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.tienda-detalle h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.horarios-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.horarios-lista li {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 3px;
+}
+
+.horarios-lista strong {
+  color: #222;
+  font-weight: 600;
+}
+
+.mapa-link {
+  color: #d93838;
+  font-size: 0.85rem;
+  text-decoration: underline;
+}
+
+/* Pantallas medianas y grandes (Desktop) */
+@media (min-width: 768px) {
+  .tienda-card {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+
+/*##### footer
+
+
+/* Reseteo básico y tipografía */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Footer contenedor principal */
+.site-footer {
+  width: 100%;
+  color: #ffffff;
+}
+
+/* 1. Barra superior roja */
+.footer-top-bar {
+  background-color: #ff0000;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.15rem;
+  padding: 12px 20px;
+  letter-spacing: 0.5px;
+}
+
+/* 2. Cuerpo del footer */
+.footer-content {
+  background-color: #2b2b2b;
+  padding-top: 50px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Columnas */
+.footer-col {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-col h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+  color: #d1d1d1;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+}
+
+/* Columna 1: Brand e íconos */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.footer-badge {
+  width: 110px;
+  height: auto;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.social-icons a:hover {
+  opacity: 0.7;
+}
+
+/* Columna 4: Formulario Newsletter */
+.footer-newsletter p {
+  color: #d1d1d1;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+}
+
+.newsletter-form input {
+  width: 100%;
+  padding: 12px 45px 12px 20px;
+  border-radius: 50px;
+  border: 1px solid #ffffff;
+  background: #ffffff;
+  font-size: 0.85rem;
+  outline: none;
+  color: #333;
+}
+
+.newsletter-form button {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  color: #333;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 3. Copyright / Fondo de página */
+.footer-bottom {
+  margin-top: 50px;
+  border-top: 1px solid #444444;
+  padding: 20px 0;
+}
+
+.footer-bottom p {
+  color: #aaaaaa;
+  font-size: 0.75rem;
+}
+
+/* Ajustes Responsive (Móviles) */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .newsletter-form {
+    max-width: 100%;
+  }
+}
