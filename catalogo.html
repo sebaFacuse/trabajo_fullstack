@@ -40,14 +40,6 @@
     <main class="container my-5">
         <h2 class="text-center mb-4 fw-bold">Catálogo General</h2>
 
-        <!-- Filtros por categoría -->
-        <div class="d-flex justify-content-center flex-wrap gap-2 mb-5">
-            <button class="btn btn-dark filtro-btn active" data-filtro="todos">Todos</button>
-            <button class="btn btn-outline-dark filtro-btn" data-filtro="arabe">Árabes</button>
-            <button class="btn btn-outline-dark filtro-btn" data-filtro="disenador">Diseñador</button>
-            <button class="btn btn-outline-dark filtro-btn" data-filtro="nicho">Nicho</button>
-        </div>
-
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="grid-productos">
 
             <!-- ===================== ÁRABES ===================== -->
@@ -584,32 +576,6 @@
 
             totalElement.textContent = `$${total.toLocaleString('es-CL')}`;
         }
-
-        // ===== Filtro de categorías =====
-        const botonesFiltro = document.querySelectorAll('.filtro-btn');
-        const productos = document.querySelectorAll('.producto');
-
-        botonesFiltro.forEach(boton => {
-            boton.addEventListener('click', () => {
-                // Cambiar estilo del botón activo
-                botonesFiltro.forEach(b => {
-                    b.classList.remove('btn-dark', 'active');
-                    b.classList.add('btn-outline-dark');
-                });
-                boton.classList.remove('btn-outline-dark');
-                boton.classList.add('btn-dark', 'active');
-
-                const filtro = boton.dataset.filtro;
-
-                productos.forEach(producto => {
-                    if (filtro === 'todos' || producto.dataset.categoria === filtro) {
-                        producto.style.display = 'block';
-                    } else {
-                        producto.style.display = 'none';
-                    }
-                });
-            });
-        });
     </script>
 </body>
 </html>
