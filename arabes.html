@@ -50,139 +50,155 @@
     <main class="container my-5">
         <h2 class="text-center mb-4 fw-bold">Catálogo de Perfumes Árabes</h2>
 
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+        <!-- Botones de Filtro -->
+        <div class="d-flex justify-content-center flex-wrap gap-2 mb-4">
+            <button class="btn btn-dark filter-btn active" onclick="filtrarProductos('todos', this)">Todos</button>
+            <button class="btn btn-outline-dark filter-btn" onclick="filtrarProductos('hombre', this)">Hombre</button>
+            <button class="btn btn-outline-dark filter-btn" onclick="filtrarProductos('mujer', this)">Mujer</button>
+            <button class="btn btn-outline-dark filter-btn" onclick="filtrarProductos('unisex', this)">Unisex</button>
+        </div>
 
-            <div class="col">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="contenedor-productos">
+
+            <!-- Perfume 1 -->
+            <div class="col perfume-card" data-gender="hombre">
                 <div class="card h-100 border-0 shadow-sm">
                     <img src="img/arabe/images.jpg" class="card-img-top p-3" alt="Perfume Árabe">
                     <div class="card-body text-center d-flex flex-column justify-content-between">
                         <div>
-                            <span class="text-muted small">Árabe</span>
+                            <span class="text-muted small">Árabe • Hombre</span>
                             <h5 class="card-title fw-bold mt-1">Hawas malibu</h5>
                             <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
                         </div>
                         <div>
                             <p class="fw-bold text-dark fs-5 my-2">$39.990</p>
-                            <button onclick="agregarAlCarrito('Fragancia Árabe 1', 90000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                            <button onclick="agregarAlCarrito('Hawas malibu', 39990)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col">
+            <!-- Perfume 2 -->
+            <div class="col perfume-card" data-gender="hombre">
                 <div class="card h-100 border-0 shadow-sm">
                     <img src="img/arabe/images (1).jpg" class="card-img-top p-3" alt="Perfume Árabe">
                     <div class="card-body text-center d-flex flex-column justify-content-between">
                         <div>
-                            <span class="text-muted small">Árabe</span>
+                            <span class="text-muted small">Árabe • Hombre</span>
                             <h5 class="card-title fw-bold mt-1">Pacific Aura Rayhaan</h5>
                             <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
                         </div>
                         <div>
-                            <p class="fw-bold text-dark fs-5 my-2">$ 63.636</p>
-                            <button onclick="agregarAlCarrito('Fragancia Árabe 2', 95000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                            <p class="fw-bold text-dark fs-5 my-2">$63.636</p>
+                            <button onclick="agregarAlCarrito('Pacific Aura Rayhaan', 63636)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col">
+            <!-- Perfume 3 -->
+            <div class="col perfume-card" data-gender="mujer">
                 <div class="card h-100 border-0 shadow-sm">
                     <img src="img/arabe/images (2).jpg" class="card-img-top p-3" alt="Eclaire">
                     <div class="card-body text-center d-flex flex-column justify-content-between">
                         <div>
-                            <span class="text-muted small">Árabe</span>
+                            <span class="text-muted small">Árabe • Mujer</span>
                             <h5 class="card-title fw-bold mt-1">Eclaire</h5>
                             <p class="card-text text-muted">Eau de Parfum - 105 ml</p>
                         </div>
                         <div>
                             <p class="fw-bold text-dark fs-5 my-2">$29.990</p>
-                            <button onclick="agregarAlCarrito('Eclaire', 110000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                            <button onclick="agregarAlCarrito('Eclaire', 29990)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col">
+            <!-- Perfume 4 -->
+            <div class="col perfume-card" data-gender="hombre">
                 <div class="card h-100 border-0 shadow-sm">
                     <img src="img/arabe/images (3).jpg" class="card-img-top p-3" alt="Perfume Árabe">
                     <div class="card-body text-center d-flex flex-column justify-content-between">
                         <div>
-                            <span class="text-muted small">Árabe</span>
+                            <span class="text-muted small">Árabe • Hombre</span>
                             <h5 class="card-title fw-bold mt-1">9 PM</h5>
                             <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
                         </div>
                         <div>
                             <p class="fw-bold text-dark fs-5 my-2">$69.120</p>
-                            <button onclick="agregarAlCarrito('Fragancia Árabe 4', 92000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                            <button onclick="agregarAlCarrito('9 PM', 69120)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col">
+            <!-- Perfume 5 -->
+            <div class="col perfume-card" data-gender="unisex">
                 <div class="card h-100 border-0 shadow-sm">
                     <img src="img/arabe/images (4).jpg" class="card-img-top p-3" alt="Perfume Árabe">
                     <div class="card-body text-center d-flex flex-column justify-content-between">
                         <div>
-                            <span class="text-muted small">Árabe</span>
+                            <span class="text-muted small">Árabe • Unisex</span>
                             <h5 class="card-title fw-bold mt-1">Club the nuit untold</h5>
                             <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
                         </div>
                         <div>
                             <p class="fw-bold text-dark fs-5 my-2">$39.990</p>
-                            <button onclick="agregarAlCarrito('Fragancia Árabe 5', 98000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                            <button onclick="agregarAlCarrito('Club the nuit untold', 39990)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col">
+            <!-- Perfume 6 -->
+            <div class="col perfume-card" data-gender="unisex">
                 <div class="card h-100 border-0 shadow-sm">
                     <img src="img/arabe/images (5).jpg" class="card-img-top p-3" alt="Perfume Árabe">
                     <div class="card-body text-center d-flex flex-column justify-content-between">
                         <div>
-                            <span class="text-muted small">Árabe</span>
+                            <span class="text-muted small">Árabe • Unisex</span>
                             <h5 class="card-title fw-bold mt-1">lattafa khamrah</h5>
                             <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
                         </div>
                         <div>
                             <p class="fw-bold text-dark fs-5 my-2">$69.990</p>
-                            <button onclick="agregarAlCarrito('Fragancia Árabe 6', 100000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                            <button onclick="agregarAlCarrito('lattafa khamrah', 69990)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col">
+            <!-- Perfume 7 -->
+            <div class="col perfume-card" data-gender="unisex">
                 <div class="card h-100 border-0 shadow-sm">
                     <img src="img/arabe/images (6).jpg" class="card-img-top p-3" alt="Perfume Árabe">
                     <div class="card-body text-center d-flex flex-column justify-content-between">
                         <div>
-                            <span class="text-muted small">Árabe</span>
+                            <span class="text-muted small">Árabe • Unisex</span>
                             <h5 class="card-title fw-bold mt-1">French Avenue Amber Empire Extrait de Parfum 100 ML</h5>
                             <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
                         </div>
                         <div>
                             <p class="fw-bold text-dark fs-5 my-2">$93.000</p>
-                            <button onclick="agregarAlCarrito('Fragancia Árabe 7', 93000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                            <button onclick="agregarAlCarrito('French Avenue Amber Empire Extrait de Parfum 100 ML', 93000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col">
+            <!-- Perfume 8 -->
+            <div class="col perfume-card" data-gender="mujer">
                 <div class="card h-100 border-0 shadow-sm">
                     <img src="img/arabe/images (7).jpg" class="card-img-top p-3" alt="Perfume Árabe">
                     <div class="card-body text-center d-flex flex-column justify-content-between">
                         <div>
-                            <span class="text-muted small">Árabe</span>
+                            <span class="text-muted small">Árabe • Mujer</span>
                             <h5 class="card-title fw-bold mt-1">lattafa khamrah waha</h5>
                             <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
                         </div>
                         <div>
                             <p class="fw-bold text-dark fs-5 my-2">$39.900</p>
-                            <button onclick="agregarAlCarrito('Fragancia Árabe 8', 97000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                            <button onclick="agregarAlCarrito('lattafa khamrah waha', 39900)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
@@ -192,7 +208,7 @@
     </main>
 
     <footer>
-        <p class="m-0">Desarrollado por Grupo de Trabajo | Año 2026</p>
+        <p class="m-0 text-center py-3">Desarrollado por Grupo de Trabajo | Año 2026</p>
     </footer>
 
     <!-- Panel Deslizable del Carrito -->
@@ -259,6 +275,26 @@
             });
 
             totalElement.textContent = `$${total.toLocaleString('es-CL')}`;
+        }
+
+        function filtrarProductos(categoria, boton) {
+            const botones = document.querySelectorAll('.filter-btn');
+            botones.forEach(btn => {
+                btn.classList.remove('btn-dark', 'active');
+                btn.classList.add('btn-outline-dark');
+            });
+            boton.classList.remove('btn-outline-dark');
+            boton.classList.add('btn-dark', 'active');
+
+            const tarjetas = document.querySelectorAll('.perfume-card');
+            tarjetas.forEach(tarjeta => {
+                const genero = tarjeta.getAttribute('data-gender');
+                if (categoria === 'todos' || genero === categoria) {
+                    tarjeta.style.display = 'block';
+                } else {
+                    tarjeta.style.display = 'none';
+                }
+            });
         }
     </script>
 </body>
