@@ -10,18 +10,32 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="arabes.html">Árabes</a></li>
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="diseñador.html">Diseñador</a></li>
-                    <li class="nav-item"><a class="nav-link" href="nicho.html">Nichos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="tiendas.html">Tiendas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalogo.html">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="arabes.html">Árabes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="diseñador.html">Diseñador</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nicho.html">Nichos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tiendas.html">Tiendas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
                 </ul>
                 <button class="btn btn-dark position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCarrito">
                 🛒 Carrito
@@ -36,174 +50,191 @@
     <main class="container my-5">
         <h2 class="text-center mb-4 fw-bold">Catálogo Perfumes de Diseñador</h2>
 
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+        <!-- Botones de Filtro -->
+        <div class="d-flex justify-content-center flex-wrap gap-2 mb-4">
+            <button class="btn btn-dark filter-btn active" onclick="filtrarProductos('todos', this)">Todos</button>
+            <button class="btn btn-outline-dark filter-btn" onclick="filtrarProductos('hombre', this)">Hombre</button>
+            <button class="btn btn-outline-dark filter-btn" onclick="filtrarProductos('mujer', this)">Mujer</button>
+            <button class="btn btn-outline-dark filter-btn" onclick="filtrarProductos('unisex', this)">Unisex</button>
+        </div>
 
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="contenedor-productos">
 
-            <div class="col">
+            <!-- Perfume 1 -->
+            <div class="col perfume-card" data-gender="hombre">
                 <div class="card h-100 border-0 shadow-sm">
-                    <img src="img/diseñador/descargar.webp" class="card-img-top p-3" alt="Perfume Diseñador 1">
+                    <img src="img/diseñador/descargar.webp" class="card-img-top p-3" alt="Perfume Diseñador">
                     <div class="card-body text-center d-flex flex-column justify-content-between">
                         <div>
-                            <span class="text-muted small">Diseñador</span>
+                            <span class="text-muted small">Diseñador • Hombre</span>
                             <h5 class="card-title fw-bold mt-1">Dior Sauvage EDP</h5>
                             <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
                         </div>
                         <div>
                             <p class="fw-bold text-dark fs-5 my-2">$148.800</p>
-                            <button onclick="agregarAlCarrito('Perfume Diseñador 1', 95000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                            <button onclick="agregarAlCarrito('Dior Sauvage EDP', 148800)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col">
+            <!-- Perfume 2 -->
+            <div class="col perfume-card" data-gender="hombre">
                 <div class="card h-100 border-0 shadow-sm">
-                    <img src="img/diseñador/descargar (1).webp" class="card-img-top p-3" alt="Perfume Diseñador 2">
+                    <img src="img/diseñador/descargar (1).webp" class="card-img-top p-3" alt="Perfume Diseñador">
                     <div class="card-body text-center d-flex flex-column justify-content-between">
                         <div>
-                            <span class="text-muted small">Diseñador</span>
+                            <span class="text-muted small">Diseñador • Hombre</span>
                             <h5 class="card-title fw-bold mt-1">Perfume EDP Jean Paul Gaultier Le Beau Paradise Garden</h5>
                             <p class="card-text text-muted">Eau de Parfum - 125 ml</p>
                         </div>
                         <div>
                             <p class="fw-bold text-dark fs-5 my-2">$133.190</p>
-                            <button onclick="agregarAlCarrito('Perfume Diseñador 2', 95000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                            <button onclick="agregarAlCarrito('Perfume EDP Jean Paul Gaultier Le Beau Paradise Garden', 133190)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col">
+            <!-- Perfume 3 -->
+            <div class="col perfume-card" data-gender="hombre">
                 <div class="card h-100 border-0 shadow-sm">
-                    <img src="img/diseñador/images.jpg" class="card-img-top p-3" alt="Perfume Diseñador 3">
+                    <img src="img/diseñador/images.jpg" class="card-img-top p-3" alt="Perfume Diseñador">
                     <div class="card-body text-center d-flex flex-column justify-content-between">
                         <div>
-                            <span class="text-muted small">Diseñador</span>
+                            <span class="text-muted small">Diseñador • Hombre</span>
                             <h5 class="card-title fw-bold mt-1">One million</h5>
                             <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
                         </div>
                         <div>
                             <p class="fw-bold text-dark fs-5 my-2">$66.990</p>
-                            <button onclick="agregarAlCarrito('Perfume Diseñador 3', 95000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                            <button onclick="agregarAlCarrito('One million', 66990)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col">
+            <!-- Perfume 4 -->
+            <div class="col perfume-card" data-gender="hombre">
                 <div class="card h-100 border-0 shadow-sm">
-                    <img src="img/diseñador/OIP.webp" class="card-img-top p-3" alt="Perfume Diseñador 4">
+                    <img src="img/diseñador/OIP.webp" class="card-img-top p-3" alt="Perfume Diseñador">
                     <div class="card-body text-center d-flex flex-column justify-content-between">
                         <div>
-                            <span class="text-muted small">Diseñador</span>
+                            <span class="text-muted small">Diseñador • Hombre</span>
                             <h5 class="card-title fw-bold mt-1">Giorgio Armani Acqua Di Gio Profondo</h5>
                             <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
                         </div>
                         <div>
                             <p class="fw-bold text-dark fs-5 my-2">$119.990</p>
-                            <button onclick="agregarAlCarrito('Perfume Diseñador 4', 95000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                            <button onclick="agregarAlCarrito('Giorgio Armani Acqua Di Gio Profondo', 119990)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col">
+            <!-- Perfume 5 -->
+            <div class="col perfume-card" data-gender="hombre">
                 <div class="card h-100 border-0 shadow-sm">
-                    <img src="img/diseñador/OIP (1).webp" class="card-img-top p-3" alt="Perfume Diseñador 5">
+                    <img src="img/diseñador/OIP (1).webp" class="card-img-top p-3" alt="Perfume Diseñador">
                     <div class="card-body text-center d-flex flex-column justify-content-between">
                         <div>
-                            <span class="text-muted small">Diseñador</span>
-                            <h5 class="card-title fw-bold mt-1">Giorgio Armani Acqua Di Gio </h5>
+                            <span class="text-muted small">Diseñador • Hombre</span>
+                            <h5 class="card-title fw-bold mt-1">Giorgio Armani Acqua Di Gio</h5>
                             <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
                         </div>
                         <div>
                             <p class="fw-bold text-dark fs-5 my-2">$106.400</p>
-                            <button onclick="agregarAlCarrito('Perfume Diseñador 5', 95000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                            <button onclick="agregarAlCarrito('Giorgio Armani Acqua Di Gio', 106400)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col">
+            <!-- Perfume 6 -->
+            <div class="col perfume-card" data-gender="hombre">
                 <div class="card h-100 border-0 shadow-sm">
-                    <img src="img/diseñador/OIP (2).webp" class="card-img-top p-3" alt="Perfume Diseñador 6">
+                    <img src="img/diseñador/OIP (2).webp" class="card-img-top p-3" alt="Perfume Diseñador">
                     <div class="card-body text-center d-flex flex-column justify-content-between">
                         <div>
-                            <span class="text-muted small">Diseñador</span>
+                            <span class="text-muted small">Diseñador • Hombre</span>
                             <h5 class="card-title fw-bold mt-1">Le beau parfum EDP Jean paul gaultier</h5>
                             <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
                         </div>
                         <div>
                             <p class="fw-bold text-dark fs-5 my-2">$144.990</p>
-                            <button onclick="agregarAlCarrito('Perfume Diseñador 6', 95000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                            <button onclick="agregarAlCarrito('Le beau parfum EDP Jean paul gaultier', 144990)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col">
+            <!-- Perfume 7 -->
+            <div class="col perfume-card" data-gender="hombre">
                 <div class="card h-100 border-0 shadow-sm">
-                    <img src="img/diseñador/OIP (3).webp" class="card-img-top p-3" alt="Perfume Diseñador 7">
+                    <img src="img/diseñador/OIP (3).webp" class="card-img-top p-3" alt="Perfume Diseñador">
                     <div class="card-body text-center d-flex flex-column justify-content-between">
                         <div>
-                            <span class="text-muted small">Diseñador</span>
+                            <span class="text-muted small">Diseñador • Hombre</span>
                             <h5 class="card-title fw-bold mt-1">One million royal</h5>
                             <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
                         </div>
                         <div>
                             <p class="fw-bold text-dark fs-5 my-2">$95.000</p>
-                            <button onclick="agregarAlCarrito('Perfume Diseñador 7', 95000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                            <button onclick="agregarAlCarrito('One million royal', 95000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col">
+            <!-- Perfume 8 -->
+            <div class="col perfume-card" data-gender="hombre">
                 <div class="card h-100 border-0 shadow-sm">
-                    <img src="img/diseñador/OIP (4).webp" class="card-img-top p-3" alt="Perfume Diseñador 8">
+                    <img src="img/diseñador/OIP (4).webp" class="card-img-top p-3" alt="Perfume Diseñador">
                     <div class="card-body text-center d-flex flex-column justify-content-between">
                         <div>
-                            <span class="text-muted small">Diseñador</span>
+                            <span class="text-muted small">Diseñador • Hombre</span>
                             <h5 class="card-title fw-bold mt-1">invictus parfume</h5>
                             <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
                         </div>
                         <div>
-                            <p class="fw-bold text-dark fs-5 my-2">$133.0800</p>
-                            <button onclick="agregarAlCarrito('Perfume Diseñador 8', 95000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                            <p class="fw-bold text-dark fs-5 my-2">$133.080</p>
+                            <button onclick="agregarAlCarrito('invictus parfume', 133080)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col">
+            <!-- Perfume 9 -->
+            <div class="col perfume-card" data-gender="hombre">
                 <div class="card h-100 border-0 shadow-sm">
-                    <img src="img/diseñador/OIP (5).webp" class="card-img-top p-3" alt="Perfume Diseñador 9">
+                    <img src="img/diseñador/OIP (5).webp" class="card-img-top p-3" alt="Perfume Diseñador">
                     <div class="card-body text-center d-flex flex-column justify-content-between">
                         <div>
-                            <span class="text-muted small">Diseñador</span>
+                            <span class="text-muted small">Diseñador • Hombre</span>
                             <h5 class="card-title fw-bold mt-1">versace eros flame</h5>
                             <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
                         </div>
                         <div>
                             <p class="fw-bold text-dark fs-5 my-2">$55.000</p>
-                            <button onclick="agregarAlCarrito('Perfume Diseñador 9', 95000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                            <button onclick="agregarAlCarrito('versace eros flame', 55000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col">
+            <!-- Perfume 10 -->
+            <div class="col perfume-card" data-gender="hombre">
                 <div class="card h-100 border-0 shadow-sm">
-                    <img src="img/diseñador/OIP (6).webp" class="card-img-top p-3" alt="Perfume Diseñador 10">
+                    <img src="img/diseñador/OIP (6).webp" class="card-img-top p-3" alt="Perfume Diseñador">
                     <div class="card-body text-center d-flex flex-column justify-content-between">
                         <div>
-                            <span class="text-muted small">Diseñador</span>
-                            <h5 class="card-title fw-bold mt-1">Armani Stronger With You Intensely </h5>
+                            <span class="text-muted small">Diseñador • Hombre</span>
+                            <h5 class="card-title fw-bold mt-1">Armani Stronger With You Intensely</h5>
                             <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
                         </div>
                         <div>
                             <p class="fw-bold text-dark fs-5 my-2">$74.900</p>
-                            <button onclick="agregarAlCarrito('Perfume Diseñador 10', 95000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
+                            <button onclick="agregarAlCarrito('Armani Stronger With You Intensely', 74900)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
@@ -216,6 +247,91 @@
         <p class="m-0 text-center py-3">Desarrollado por Grupo de Trabajo | Año 2026</p>
     </footer>
 
+    <!-- Panel Deslizable del Carrito -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrito" aria-labelledby="offcanvasCarritoLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasCarritoLabel">Mi Carrito</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <ul id="lista-carrito" class="list-group list-group-flush mb-auto">
+                <li class="list-group-item text-muted text-center py-4">El carrito está vacío</li>
+            </ul>
+            <div class="border-top pt-3">
+                <div class="d-flex justify-content-between fw-bold fs-5 mb-3">
+                    <span>Total:</span>
+                    <span id="total-carrito">$0</span>
+                </div>
+                <button class="btn btn-dark w-100 rounded-0 py-2">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const carrito = [];
+
+        function agregarAlCarrito(nombre, precio) {
+            carrito.push({ nombre, precio });
+            actualizarCarritoUI();
+        }
+
+        function eliminarDelCarrito(index) {
+            carrito.splice(index, 1);
+            actualizarCarritoUI();
+        }
+
+        function actualizarCarritoUI() {
+            const contador = document.getElementById('contador-carrito');
+            const lista = document.getElementById('lista-carrito');
+            const totalElement = document.getElementById('total-carrito');
+
+            contador.textContent = carrito.length;
+
+            if (carrito.length === 0) {
+                lista.innerHTML = '<li class="list-group-item text-muted text-center py-4">El carrito está vacío</li>';
+                totalElement.textContent = '$0';
+                return;
+            }
+
+            lista.innerHTML = '';
+            let total = 0;
+
+            carrito.forEach((producto, index) => {
+                total += producto.precio;
+                lista.innerHTML += `
+                    <li class="list-group-item d-flex justify-content-between align-items-center px-0 py-3">
+                        <div>
+                            <h6 class="my-0 fw-bold">${producto.nombre}</h6>
+                            <small class="text-muted">$${producto.precio.toLocaleString('es-CL')}</small>
+                        </div>
+                        <button class="btn btn-sm btn-outline-danger border-0" onclick="eliminarDelCarrito(${index})">✕</button>
+                    </li>
+                `;
+            });
+
+            totalElement.textContent = `$${total.toLocaleString('es-CL')}`;
+        }
+
+        function filtrarProductos(categoria, boton) {
+            const botones = document.querySelectorAll('.filter-btn');
+            botones.forEach(btn => {
+                btn.classList.remove('btn-dark', 'active');
+                btn.classList.add('btn-outline-dark');
+            });
+            boton.classList.remove('btn-outline-dark');
+            boton.classList.add('btn-dark', 'active');
+
+            const tarjetas = document.querySelectorAll('.perfume-card');
+            tarjetas.forEach(tarjeta => {
+                const genero = tarjeta.getAttribute('data-gender');
+                if (categoria === 'todos' || genero === categoria) {
+                    tarjeta.style.display = 'block';
+                } else {
+                    tarjeta.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
