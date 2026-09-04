@@ -1,11 +1,16 @@
-const carrito = [];
+// Cargar el carrito guardado en el navegador o iniciar uno vacío
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+// Guardar en el almacenamiento del navegador
+function guardarCarrito() {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+}
 
 function agregarAlCarrito(id) {
     fetch("data/productos.json")
     .then(respuesta => respuesta.json())
     .then(productos => {
         let producto = productos.find(p => p.id == id);
-        
         let existe = carrito.find(p => p.id == id);
 
         if (existe) {
@@ -15,15 +20,16 @@ function agregarAlCarrito(id) {
             carrito.push(producto);
         }
 
+        guardarCarrito(); // Guarda los cambios entre páginas
         actualizarCarritoUI();
 
-        // LÍNEA NUEVA: Muestra el mensaje al usuario
         alert(`¡${producto.marca} ${producto.modelo} agregado al carrito!`);
     });
 }
 
 function eliminarDelCarrito(index) {
     carrito.splice(index, 1);
+    guardarCarrito(); // Guarda la eliminación
     actualizarCarritoUI();
 }
 
@@ -34,9 +40,10 @@ function actualizarCarritoUI() {
 
     if (!contador || !lista || !totalElement) return;
 
-    contador.textContent = carrito.length;
+    const totalUnidades = carrito.reduce((acc, p) => acc + p.cantidad, 0);
+    contador.textContent = totalUnidades;
 
-    if (carrito.length == 0) {
+    if (carrito.length === 0) {
         lista.innerHTML = '<li class="list-group-item text-muted text-center py-4">El carrito está vacío</li>';
         totalElement.textContent = "$0";
         return;
@@ -46,7 +53,6 @@ function actualizarCarritoUI() {
     let total = 0;
 
     carrito.forEach((producto, index) => {
-        // 2. Multiplicamos precio por la cantidad guardada
         total += producto.precio * producto.cantidad;
 
         lista.innerHTML += `
@@ -61,3 +67,36 @@ function actualizarCarritoUI() {
 
     totalElement.textContent = `$${total.toLocaleString("es-CL")}`;
 }
+
+function finalizarCompra() {
+    if (carrito.length === 0) {
+        alert("⚠️ Tu carrito está vacío. Agrega productos antes de finalizar la compra.");
+        return;
+    }
+
+    alert("🎉 ¡Compra realizada con éxito! Muchas gracias por tu pedido.");
+
+    carrito = [];
+    guardarCarrito(); // Limpia la memoria local al comprar
+    actualizarCarritoUI();
+
+    const offcanvasElement = document.getElementById('offcanvasCarrito');
+    if (offcanvasElement) {
+        const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+        if (bsOffcanvas) {
+            bsOffcanvas.hide();
+        }
+    }
+}
+
+// Cargar la interfaz con los datos guardados en cuanto se abra la página
+document.addEventListener('DOMContentLoaded', () => {
+    actualizarCarritoUI();
+
+    const btnFinalizar = document.getElementById('btn-finalizar-compra') || 
+                         document.querySelector('#offcanvasCarrito .border-top button');
+
+    if (btnFinalizar) {
+        btnFinalizar.addEventListener('click', finalizarCompra);
+    }
+});
