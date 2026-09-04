@@ -9,51 +9,65 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="arabes.html">Árabes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="diseñador.html">Diseñador</a></li>
-                    <li class="nav-item"><a class="nav-link" href="nicho.html">Nichos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="tiendas.html">Tiendas</a></li>
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a></li>
-                </ul>
-                <button class="btn btn-dark position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCarrito">
-                    🛒 Carrito
-                    <span id="contador-carrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="arabes.html">Árabes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="diseñador.html">Diseñador</a></li>
+                        <li class="nav-item"><a class="nav-link" href="nicho.html">Nichos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tiendas.html">Tiendas</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a></li>
+                    </ul>
+                    <button class="btn btn-dark position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCarrito">
+                        🛒 Carrito
+                        <span id="contador-carrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                    </button>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <main class="container my-5" style="max-width: 600px;">
         <h1 class="text-center mb-4 fw-bold">Contáctanos</h1>
-        <form onsubmit="event.preventDefault();">
+        
+        <!-- Alerta dinámica de confirmación -->
+        <div id="mensajeExito" class="alert alert-success d-none mb-4" role="alert">
+            ¡Gracias por contactarnos! Tu mensaje ha sido enviado con éxito.
+        </div>
+
+        <form id="formContacto" novalidate>
             <div class="mb-3">
                 <label for="nombreUsuario" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombreUsuario" required>
+                <input type="text" class="form-control" id="nombreUsuario">
+                <div class="invalid-feedback" id="errorNombre"></div>
             </div>
             <div class="mb-3">
                 <label for="apellidoUsuario" class="form-label">Apellido</label>
-                <input type="text" class="form-control" id="apellidoUsuario" required>
+                <input type="text" class="form-control" id="apellidoUsuario">
+                <div class="invalid-feedback" id="errorApellido"></div>
             </div>
             <div class="mb-3">
                 <label for="telefonoUsuario" class="form-label">Teléfono</label>
-                <input type="tel" class="form-control" id="telefonoUsuario">
+                <input type="tel" class="form-control" id="telefonoUsuario" placeholder="+56912345678">
+                <div class="invalid-feedback" id="errorTelefono"></div>
             </div>
             <div class="mb-3">
                 <label for="emailInput" class="form-label">Correo electrónico</label>
-                <input type="email" class="form-control" id="emailInput" required>
+                <input type="email" class="form-control" id="emailInput" placeholder="ejemplo@correo.com">
+                <div class="invalid-feedback" id="errorEmail"></div>
             </div>
             <div class="mb-3">
                 <label for="mensajeInput" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="mensajeInput" rows="4" required></textarea>
+                <textarea class="form-control" id="mensajeInput" rows="4"></textarea>
+                <div class="invalid-feedback" id="errorMensaje"></div>
+                <div class="form-text text-end" id="sugerenciaMensaje">Caracteres restantes: 250</div>
             </div>
             <button type="submit" class="btn btn-dark w-100">Enviar Mensaje</button>
         </form>
@@ -89,5 +103,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/carrito.js"></script>
+    <script src="js/contacto.js"></script>
 </body>
 </html>
