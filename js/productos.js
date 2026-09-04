@@ -18,7 +18,7 @@ function cargarProductosPagina() {
 // Filtra el JSON según la vista: los ID elegidos para Inicio, la categoría (árabe/diseñador/nicho) o todo en Catálogo
 function obtenerProductosPorPagina(pagina) {
     if (pagina.includes("index") || pagina === "" || pagina === "index.html") {
-        let idsInicio = [1, 2, 3,17]; // <-- PON AQUÍ LOS ID DE TU JSON
+        let idsInicio = [6, 2, 3,17,]; // <-- PON AQUÍ LOS ID DE TU JSON
         return todosLosProductos.filter(p => idsInicio.includes(Number(p.id)));
     } else if (pagina.includes("arabe")) {
         return todosLosProductos.filter(p => p.tipo && p.tipo.toLowerCase().includes("arabe"));
