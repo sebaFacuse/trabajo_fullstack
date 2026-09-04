@@ -38,10 +38,10 @@
                     </li>
                 </ul>
                 <button class="btn btn-dark position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCarrito">
-                🛒 Carrito
-                <span id="contador-carrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    🛒 Carrito
+                    <span id="contador-carrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                         0
-                </span>
+                    </span>
                 </button>
             </div>
         </div>
@@ -58,153 +58,8 @@
             <button class="btn btn-outline-dark filter-btn" onclick="filtrarProductos('unisex', this)">Unisex</button>
         </div>
 
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="contenedor-productos">
-
-            <!-- Perfume 1 -->
-            <div class="col perfume-card" data-gender="hombre">
-                <div class="card h-100 border-0 shadow-sm">
-                    <img src="img/arabe/images.jpg" class="card-img-top p-3" alt="Perfume Árabe">
-                    <div class="card-body text-center d-flex flex-column justify-content-between">
-                        <div>
-                            <span class="text-muted small">Árabe • Hombre</span>
-                            <h5 class="card-title fw-bold mt-1">Hawas Malibu</h5>
-                            <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
-                        </div>
-                        <div>
-                            <p class="fw-bold text-dark fs-5 my-2">$39.990</p>
-                            <button onclick="agregarAlCarrito('Hawas Malibu', 39990)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Perfume 2 -->
-            <div class="col perfume-card" data-gender="hombre">
-                <div class="card h-100 border-0 shadow-sm">
-                    <img src="img/arabe/images (1).jpg" class="card-img-top p-3" alt="Perfume Árabe">
-                    <div class="card-body text-center d-flex flex-column justify-content-between">
-                        <div>
-                            <span class="text-muted small">Árabe • Hombre</span>
-                            <h5 class="card-title fw-bold mt-1">Pacific Aura Rayhaan</h5>
-                            <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
-                        </div>
-                        <div>
-                            <p class="fw-bold text-dark fs-5 my-2">$63.636</p>
-                            <button onclick="agregarAlCarrito('Pacific Aura Rayhaan', 63636)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Perfume 3 -->
-            <div class="col perfume-card" data-gender="mujer">
-                <div class="card h-100 border-0 shadow-sm">
-                    <img src="img/arabe/images (2).jpg" class="card-img-top p-3" alt="Eclaire">
-                    <div class="card-body text-center d-flex flex-column justify-content-between">
-                        <div>
-                            <span class="text-muted small">Árabe • Mujer</span>
-                            <h5 class="card-title fw-bold mt-1">Eclaire</h5>
-                            <p class="card-text text-muted">Eau de Parfum - 105 ml</p>
-                        </div>
-                        <div>
-                            <p class="fw-bold text-dark fs-5 my-2">$29.990</p>
-                            <button onclick="agregarAlCarrito('Eclaire', 29990)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Perfume 4 -->
-            <div class="col perfume-card" data-gender="hombre">
-                <div class="card h-100 border-0 shadow-sm">
-                    <img src="img/arabe/images (3).jpg" class="card-img-top p-3" alt="Perfume Árabe">
-                    <div class="card-body text-center d-flex flex-column justify-content-between">
-                        <div>
-                            <span class="text-muted small">Árabe • Hombre</span>
-                            <h5 class="card-title fw-bold mt-1">9 AM</h5>
-                            <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
-                        </div>
-                        <div>
-                            <p class="fw-bold text-dark fs-5 my-2">$69.120</p>
-                            <button onclick="agregarAlCarrito('9 AM', 69120)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Perfume 5 -->
-            <div class="col perfume-card" data-gender="unisex">
-                <div class="card h-100 border-0 shadow-sm">
-                    <img src="img/arabe/images (4).jpg" class="card-img-top p-3" alt="Perfume Árabe">
-                    <div class="card-body text-center d-flex flex-column justify-content-between">
-                        <div>
-                            <span class="text-muted small">Árabe • Unisex</span>
-                            <h5 class="card-title fw-bold mt-1">Club The Nuit Untold</h5>
-                            <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
-                        </div>
-                        <div>
-                            <p class="fw-bold text-dark fs-5 my-2">$39.990</p>
-                            <button onclick="agregarAlCarrito('Club The Nuit Untold', 39990)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Perfume 6 -->
-            <div class="col perfume-card" data-gender="unisex">
-                <div class="card h-100 border-0 shadow-sm">
-                    <img src="img/arabe/images (5).jpg" class="card-img-top p-3" alt="Perfume Árabe">
-                    <div class="card-body text-center d-flex flex-column justify-content-between">
-                        <div>
-                            <span class="text-muted small">Árabe • Unisex</span>
-                            <h5 class="card-title fw-bold mt-1">Lattafa Khamrah</h5>
-                            <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
-                        </div>
-                        <div>
-                            <p class="fw-bold text-dark fs-5 my-2">$69.990</p>
-                            <button onclick="agregarAlCarrito('Lattafa Khamrah', 69990)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Perfume 7 -->
-            <div class="col perfume-card" data-gender="unisex">
-                <div class="card h-100 border-0 shadow-sm">
-                    <img src="img/arabe/images (6).jpg" class="card-img-top p-3" alt="Perfume Árabe">
-                    <div class="card-body text-center d-flex flex-column justify-content-between">
-                        <div>
-                            <span class="text-muted small">Árabe • Unisex</span>
-                            <h5 class="card-title fw-bold mt-1">French Avenue Amber Empire </h5>
-                            <p class="card-text text-muted">Extrait de Parfum - 100 ml</p>
-                        </div>
-                        <div>
-                            <p class="fw-bold text-dark fs-5 my-2">$93.000</p>
-                            <button onclick="agregarAlCarrito('French Avenue Amber Empire Extrait de Parfum ', 93000)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Perfume 8 -->
-            <div class="col perfume-card" data-gender="mujer">
-                <div class="card h-100 border-0 shadow-sm">
-                    <img src="img/arabe/images (7).jpg" class="card-img-top p-3" alt="Perfume Árabe">
-                    <div class="card-body text-center d-flex flex-column justify-content-between">
-                        <div>
-                            <span class="text-muted small">Árabe • Mujer</span>
-                            <h5 class="card-title fw-bold mt-1">Lattafa khamrah Waha</h5>
-                            <p class="card-text text-muted">Eau de Parfum - 100 ml</p>
-                        </div>
-                        <div>
-                            <p class="fw-bold text-dark fs-5 my-2">$39.900</p>
-                            <button onclick="agregarAlCarrito('Lattafa khamrah Waha', 39900)" class="btn btn-dark w-100 rounded-0">Agregar al carrito</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+        <!-- Contenedor donde productos.js insertará las cards dinámicas -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="contenedor-productos"></div>
     </main>
 
     <footer class="site-footer">
@@ -214,57 +69,54 @@
 
         <div class="footer-content">
             <div class="footer-container">
-            
-            <div class="footer-col footer-brand">
-                
-                <div class="social-icons">
-                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <div class="footer-col footer-brand">
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="#">Venta Mayorista</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#">¿Cómo Comprar?</a></li>
+                        <li><a href="#">Despachos</a></li>
+                        <li><a href="#">Cambios y Devoluciones</a></li>
+                        <li><a href="#">TEST: Encuentra la fragancia perfecta</a></li>
+                        <li><a href="#">Personaliza tu perfume</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="#">Tiendas</a></li>
+                        <li><a href="#">Buscar</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Clientes Felices</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-newsletter">
+                    <h4>¡Descubre nuestras ofertas antes que todos!</h4>
+                    <p>Suscríbete a nuestro Newsletter.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit" aria-label="Suscribirse">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
 
-            <div class="footer-col">
-                <h4>Información</h4>
-                <ul>
-                <li><a href="#">Venta Mayorista</a></li>
-                <li><a href="#">Preguntas Frecuentes</a></li>
-                <li><a href="#">¿Cómo Comprar?</a></li>
-                <li><a href="#">Despachos</a></li>
-                <li><a href="#">Cambios y Devoluciones</a></li>
-                <li><a href="#">TEST: Encuentra la fragancia perfecta</a></li>
-                <li><a href="#">Personaliza tu perfume</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h4>Empresa</h4>
-                <ul>
-                <li><a href="#">Sobre Nosotros</a></li>
-                <li><a href="#">Tiendas</a></li>
-                <li><a href="#">Buscar</a></li>
-                <li><a href="#">Términos y Condiciones</a></li>
-                <li><a href="#">Clientes Felices</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col footer-newsletter">
-                <h4>¡Descubre nuestras ofertas antes que todos!</h4>
-                <p>Suscríbete a nuestro Newsletter.</p>
-                <form class="newsletter-form" onsubmit="event.preventDefault();">
-                <input type="email" placeholder="Tu correo electrónico" required>
-                <button type="submit" aria-label="Suscribirse">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-                </form>
-            </div>
-
-            </div>
-
             <div class="footer-bottom">
-            <div class="footer-container">
-                <p>© 2026 Perfumes. Todos los derechos reservados.</p>
-            </div>
+                <div class="footer-container">
+                    <p>© 2026 Perfumes. Todos los derechos reservados.</p>
+                </div>
             </div>
         </div>
     </footer>
@@ -289,71 +141,9 @@
         </div>
     </div>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const carrito = [];
-
-        function agregarAlCarrito(nombre, precio) {
-            carrito.push({ nombre, precio });
-            actualizarCarritoUI();
-        }
-
-        function eliminarDelCarrito(index) {
-            carrito.splice(index, 1);
-            actualizarCarritoUI();
-        }
-
-        function actualizarCarritoUI() {
-            const contador = document.getElementById('contador-carrito');
-            const lista = document.getElementById('lista-carrito');
-            const totalElement = document.getElementById('total-carrito');
-
-            contador.textContent = carrito.length;
-
-            if (carrito.length === 0) {
-                lista.innerHTML = '<li class="list-group-item text-muted text-center py-4">El carrito está vacío</li>';
-                totalElement.textContent = '$0';
-                return;
-            }
-
-            lista.innerHTML = '';
-            let total = 0;
-
-            carrito.forEach((producto, index) => {
-                total += producto.precio;
-                lista.innerHTML += `
-                    <li class="list-group-item d-flex justify-content-between align-items-center px-0 py-3">
-                        <div>
-                            <h6 class="my-0 fw-bold">${producto.nombre}</h6>
-                            <small class="text-muted">$${producto.precio.toLocaleString('es-CL')}</small>
-                        </div>
-                        <button class="btn btn-sm btn-outline-danger border-0" onclick="eliminarDelCarrito(${index})">✕</button>
-                    </li>
-                `;
-            });
-
-            totalElement.textContent = `$${total.toLocaleString('es-CL')}`;
-        }
-
-        function filtrarProductos(categoria, boton) {
-            const botones = document.querySelectorAll('.filter-btn');
-            botones.forEach(btn => {
-                btn.classList.remove('btn-dark', 'active');
-                btn.classList.add('btn-outline-dark');
-            });
-            boton.classList.remove('btn-outline-dark');
-            boton.classList.add('btn-dark', 'active');
-
-            const tarjetas = document.querySelectorAll('.perfume-card');
-            tarjetas.forEach(tarjeta => {
-                const genero = tarjeta.getAttribute('data-gender');
-                if (categoria === 'todos' || genero === categoria) {
-                    tarjeta.style.display = 'block';
-                } else {
-                    tarjeta.style.display = 'none';
-                }
-            });
-        }
-    </script>
+    <script src="js/carrito.js"></script>
+    <script src="js/productos.js"></script>
 </body>
 </html>
