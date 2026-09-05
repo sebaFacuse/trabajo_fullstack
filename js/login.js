@@ -40,15 +40,16 @@ document.addEventListener('DOMContentLoaded', () => {
             marcarValido(password, 'errorPassLogin');
         }
 
-        // Respuesta exitosa
+        // Respuesta exitosa y redirección
         if (esValido) {
             mensajeExito.classList.remove('d-none');
-            formLogin.reset();
-            limpiarClasesValidez([correo, password]);
-
+            
+            // Redirige automáticamente al index.html después de 1.5 segundos
+            setTimeout(() => {
+                window.location.href = "index.html";
+            }, 1500);
         }
     });
-
 
     function mostrarError(element, errorId, mensajeTexto) {
         element.classList.add('is-invalid');
@@ -60,11 +61,5 @@ document.addEventListener('DOMContentLoaded', () => {
         element.classList.remove('is-invalid');
         element.classList.add('is-valid');
         document.getElementById(errorId).textContent = '';
-    }
-
-    function limpiarClasesValidez(elementos) {
-        elementos.forEach(el => {
-            el.classList.remove('is-valid', 'is-invalid');
-        });
     }
 });

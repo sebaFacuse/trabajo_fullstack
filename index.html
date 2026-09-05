@@ -40,12 +40,19 @@
                         <a class="nav-link" href="contacto.html">Contacto</a>
                     </li>
                 </ul>
-                <button class="btn btn-dark position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCarrito">
-                    🛒 Carrito
-                    <span id="contador-carrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        0
-                    </span>
-                </button>
+
+                <!-- Botones de Autenticación y Carrito (¡Ahora sí incluidos!) -->
+                <div class="d-flex align-items-center gap-2">
+                    <a href="login.html" class="btn btn-outline-light btn-sm">Iniciar Sesión</a>
+                    <a href="registro.html" class="btn btn-light btn-sm fw-bold">Registrarse</a>
+                    
+                    <button class="btn btn-dark position-relative ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCarrito">
+                        🛒 Carrito
+                        <span id="contador-carrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                        </span>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
@@ -62,18 +69,13 @@
         </div>
     </div>
 
-
-    
     <!-- Sección de Productos Dinámicos -->
     <section class="container my-5">
         <h2 class="text-center mb-4 fw-bold">MÁS VENDIDOS</h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="contenedor-productos"></div>
     </section>
 
-   
-
     <!-- Youtube short-->
-
     <section class="container my-5 text-center">
         <h2 class="mb-4">Conoce cómo aplicar tus fragancias</h2>
         <div class="ratio ratio-16x9 mx-auto" style="max-width: 700px;">
@@ -85,8 +87,6 @@
             </iframe>
         </div>
     </section>
-
-
 
     <!-- Footer -->
     <footer class="site-footer">
@@ -121,7 +121,7 @@
                     <h4>Empresa</h4>
                     <ul>
                         <li><a href="#">Sobre Nosotros</a></li>
-                        <li><a href="#">Tiendas</a></li>
+                        <li><a href="tiendas.html">Tiendas</a></li>
                         <li><a href="#">Buscar</a></li>
                         <li><a href="#">Términos y Condiciones</a></li>
                         <li><a href="#">Clientes Felices</a></li>
