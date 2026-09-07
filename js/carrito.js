@@ -11,6 +11,8 @@ function agregarAlCarrito(id) {
     .then(respuesta => respuesta.json())
     .then(productos => {
         let producto = productos.find(p => p.id == id);
+        if (!producto) return;
+
         let existe = carrito.find(p => p.id == id);
 
         if (existe) {
@@ -20,16 +22,17 @@ function agregarAlCarrito(id) {
             carrito.push(producto);
         }
 
-        guardarCarrito(); // Guarda los cambios entre páginas
+        guardarCarrito();
         actualizarCarritoUI();
 
         alert(`¡${producto.marca} ${producto.modelo} agregado al carrito!`);
-    });
+    })
+    .catch(error => console.error("Error al cargar productos:", error));
 }
 
 function eliminarDelCarrito(index) {
     carrito.splice(index, 1);
-    guardarCarrito(); // Guarda la eliminación
+    guardarCarrito();
     actualizarCarritoUI();
 }
 
@@ -77,7 +80,7 @@ function finalizarCompra() {
     alert("🎉 ¡Compra realizada con éxito! Muchas gracias por tu pedido.");
 
     carrito = [];
-    guardarCarrito(); // Limpia la memoria local al comprar
+    guardarCarrito();
     actualizarCarritoUI();
 
     const offcanvasElement = document.getElementById('offcanvasCarrito');
@@ -89,7 +92,7 @@ function finalizarCompra() {
     }
 }
 
-// Cargar la interfaz con los datos guardados en cuanto se abra la página
+// Cargar la interfaz al abrir cualquier página
 document.addEventListener('DOMContentLoaded', () => {
     actualizarCarritoUI();
 
