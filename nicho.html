@@ -37,12 +37,18 @@
                         <a class="nav-link" href="contacto.html">Contacto</a>
                     </li>
                 </ul>
-                <button class="btn btn-dark position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCarrito">
-                    🛒 Carrito
-                    <span id="contador-carrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        0
-                    </span>
-                </button>
+                <!-- Botones de Autenticación y Carrito -->
+                <div class="d-flex align-items-center gap-2">
+                    <a href="login.html" class="btn btn-outline-light btn-sm">Iniciar Sesión</a>
+                    <a href="registro.html" class="btn btn-light btn-sm fw-bold">Registrarse</a>
+                    
+                    <button class="btn btn-dark position-relative ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCarrito">
+                        🛒 Carrito
+                        <span id="contador-carrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                        </span>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
