@@ -1,50 +1,30 @@
+/* ==========================================
+   1. RESETEO Y ESTILOS GENERALES
+   Usado en: TODAS las páginas del sitio (index, tiendas, contacto, login, etc.)
+   ========================================== */
+* {
+  box-sizing: border-box; /* Asegura que el padding no altere el ancho de los elementos */
+  margin: 0;
+  padding: 0;
+}
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f8f9fa; /* Fondo gris claro general */
+  color: #333;
 }
 
-footer {
-    background-color: #000000;
-    color: #ffffff;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 30px;
-}
-.extracto-seccion {
-    text-align: center;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 15px;
-}
-.menu-custom {
-    background-color: #0d6efd;
-    padding: 10px;
-    text-align: center;
-}
-
-.menu-custom a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 5px;
-}
-
-.menu-custom a:hover {
-    text-decoration: underline;
-}
-.colorUnico {
-    color: #5f0202;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-/* 1. Controla el tamaño y encuadre de las imágenes */
+/* ==========================================
+   2. TARJETAS DE PRODUCTOS (BOOTSTRAP)
+   Usado en: Catálogos de productos (arabes.html, nicho.html e index.html)
+   ========================================== */
+/* Fija la altura de las imágenes de perfumes para que la grilla se mantenga alineada */
 .card-img-top {
   height: 260px;
-  object-fit: contain; /* Usa 'cover' si prefieres que la imagen llene la tarjeta sin dejar espacios */
+  object-fit: contain; 
 }
 
-/* 2. Reserva un espacio uniforme para títulos de 1 o 2 líneas */
+/* Reserva espacio para los nombres de perfumes (1 o 2 líneas) manteniendo alineados los botones */
 .card-title {
   min-height: 48px;
   display: flex;
@@ -53,84 +33,24 @@ footer {
   margin-bottom: 0.5rem;
 }
 
-.store-card{
-    margin-bottom: 40px;
-    text-align: center;
-
+/* Usado en: Títulos especiales o nombre de la marca (ej. detalle.html o navbar) */
+.colorUnico {
+  color: #5f0202;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.store-card h2 {
-    
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 8px;
-}
-
-.store-card .adress {
-    color: #555555;
-    font-size: 15px;
-    line-height: 1.4;
-    margin-bottom: 20px;
-}
-
-.store-card h3 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 12px;
-}
-
-.schedule li {
-    font-size: 15px;
-    margin-bottom: 4px;
-    color: #333333
-}
-
-.map-link {
-    display: inline-block;
-    color: #e62222;
-    text-decoration: underline;
-    font-weight: 600;
-    font-size: 15px;
-    margin-bottom: 20px;
-}
-
-.store_image , .tienda_info{
-    flex: 1;
-}
-
-.tienda-contendor {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    max-width: 900px;
-    margin: 20px auto;
-}
-
-.tienda_info{
-    text-align: left;
-}
-
-.store_image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-/* Configuración general */
-body {
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  color: #333;
-}
-
+/* ==========================================
+   3. SECCIÓN DE TIENDAS Y SUCURSALES
+   Usado en: EXCLUSIVAMENTE en tiendas.html
+   ========================================== */
+/* Contenedor principal para centrar la sección de tiendas */
 .tiendas-container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 40px 20px;
 }
 
-/* Encabezado principal */
+/* Encabezado y subtítulo superior de tiendas.html */
 .tiendas-header {
   text-align: center;
   max-width: 650px;
@@ -149,7 +69,7 @@ body {
   line-height: 1.5;
 }
 
-/* Estructura de la tienda (Layout) */
+/* Layout de la tarjeta individual de la sucursal */
 .tienda-card {
   display: flex;
   flex-direction: column;
@@ -157,7 +77,7 @@ body {
   align-items: center;
 }
 
-/* Imagen */
+/* Columna de la imagen de la tienda */
 .tienda-imagen {
   flex: 1;
   width: 100%;
@@ -170,7 +90,7 @@ body {
   object-fit: cover;
 }
 
-/* Detalles del texto */
+/* Columna con información, dirección y horarios */
 .tienda-detalle {
   flex: 1;
   width: 100%;
@@ -195,6 +115,7 @@ body {
   margin-bottom: 12px;
 }
 
+/* Lista de días y horas de atención */
 .horarios-lista {
   list-style: none;
   padding: 0;
@@ -212,13 +133,14 @@ body {
   font-weight: 600;
 }
 
+/* Enlace a Google Maps en la tienda */
 .mapa-link {
   color: #d93838;
   font-size: 0.85rem;
   text-decoration: underline;
 }
 
-/* Pantallas medianas y grandes (Desktop) */
+/* Responsivo: Pasa la tarjeta de filas a columnas en pantallas medianas o superiores */
 @media (min-width: 768px) {
   .tienda-card {
     flex-direction: row;
@@ -226,28 +148,16 @@ body {
   }
 }
 
-
-/*##### footer
-
-
-/* Reseteo básico y tipografía */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-}
-
-/* Footer contenedor principal */
+/* ==========================================
+   4. FOOTER PERSONALIZADO
+   Usado en: El pie de página de contacto.html, tiendas.html, arabes.html, etc.
+   ========================================== */
 .site-footer {
   width: 100%;
   color: #ffffff;
 }
 
-/* 1. Barra superior roja */
+/* Barra superior roja con el anuncio de envíos o promociones */
 .footer-top-bar {
   background-color: #ff0000;
   color: #ffffff;
@@ -258,12 +168,13 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* 2. Cuerpo del footer */
+/* Cuerpo principal oscuro del footer */
 .footer-content {
   background-color: #2b2b2b;
   padding-top: 50px;
 }
 
+/* Distribución en grilla flexible para las 4 columnas del footer */
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -274,7 +185,6 @@ body {
   gap: 30px;
 }
 
-/* Columnas */
 .footer-col {
   flex: 1;
   min-width: 220px;
@@ -306,7 +216,7 @@ body {
   color: #ffffff;
 }
 
-/* Columna 1: Brand e íconos */
+/* Columna 1: Logo/Sello y redes sociales */
 .footer-brand {
   display: flex;
   flex-direction: column;
@@ -319,6 +229,7 @@ body {
   height: auto;
 }
 
+/* Contenedor de íconos sociales (Facebook, Instagram, TikTok) */
 .social-icons {
   display: flex;
   gap: 15px;
@@ -335,7 +246,7 @@ body {
   opacity: 0.7;
 }
 
-/* Columna 4: Formulario Newsletter */
+/* Columna 4: Formulario para el boletín de noticias (Newsletter) */
 .footer-newsletter p {
   color: #d1d1d1;
   font-size: 0.9rem;
@@ -376,7 +287,7 @@ body {
   justify-content: center;
 }
 
-/* 3. Copyright / Fondo de página */
+/* Franja inferior del Copyright */
 .footer-bottom {
   margin-top: 50px;
   border-top: 1px solid #444444;
@@ -388,7 +299,7 @@ body {
   font-size: 0.75rem;
 }
 
-/* Ajustes Responsive (Móviles) */
+/* Ajustes para pantallas de teléfonos (Móviles) */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
